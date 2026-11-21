@@ -1,0 +1,204 @@
+@font-face {
+  font-family:'DM Serif Display';
+  src:url(dm-serif-display-regular.ttf) format('truetype');
+  font-display:swap;
+}
+.aria-unit .residence-feature-number {
+  font:400 clamp(90px,13.7vw,255px)/.8 'DM Serif Display',Georgia,serif;
+  letter-spacing:-.007em;
+}
+.aria-unit .residence-feature-slogan {display:block;font-family:Futura,sans-serif}
+.aria-unit .residence-feature-slogan .editorial {font:400 1em/1 'Cormorant Garamond',Georgia,serif}
+.aria-unit .listing-header-actions a {padding:9px 0;border-bottom:1px solid var(--gold)}
+.aria-unit .listing-header-carousel img {object-position:center}
+.aria-unit .listing-header-media > p {margin:12px 0 0;color:var(--muted);font-size:14px}
+.aria-unit-strip {display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:1px;background:var(--line);text-align:center}
+.aria-unit-strip > div {min-width:0;background:#000;padding:13px 8px}
+.aria-unit-strip dt {font-size:12px;color:var(--gold)}
+.aria-unit-strip dd {margin:3px 0 0;font-size:clamp(14px,1.45vw,20px)}
+.aria-unit-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.aria-unit-gallery button {padding:0;border:0;background:#171717;cursor:pointer}
+.aria-unit-gallery img {display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.aria-unit .photo-dialog {width:min(1240px,calc(100% - 30px));max-height:94svh;overflow:auto;color:#fff;border:1px solid #555;padding:0}
+.aria-unit .photo-dialog::backdrop {background:#000e}
+.aria-unit .photo-dialog img {display:block;width:100%;max-height:70svh;object-fit:contain}
+.aria-unit .photo-toolbar,.aria-unit .photo-bottom {display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px}
+.aria-unit .photo-toolbar button,.aria-unit .photo-bottom button {color:inherit;border:1px solid #777;background:none;padding:8px 12px;cursor:pointer}
+.aria-unit .photo-bottom {text-align:center}
+.aria-unit .photo-bottom small {color:var(--muted)}
+@media(max-width:960px) {.aria-unit-strip {grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px) {
+  .aria-unit .residence-feature-number {font-size:clamp(76px,23vw,145px)}
+  .aria-unit-gallery {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:500px) {.aria-unit-strip {grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.aria-unit .unit-browse-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  gap:12px 30px;
+  margin-bottom:32px;
+}
+.aria-unit .unit-browse-heading h2 {margin-bottom:0}
+.unit-browse-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(195px,1fr));
+  gap:18px;
+}
+.unit-browse-card {min-width:0;background:#0c0c0c;border:1px solid #ffffff24}
+.unit-browse-card>a {display:block;height:100%}
+.unit-browse-card img {display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.unit-browse-card-copy {padding:19px 20px}
+.unit-browse-card-copy .eyebrow {margin-bottom:8px}
+.unit-browse-card-copy h3 {font-size:clamp(20px,2.1vw,27px);margin-bottom:10px}
+.unit-browse-card-copy .textlink {font-size:15px}
+@media(max-width:760px){.unit-browse-grid{grid-template-columns:1fr}}
+
+.aria-unit .mortgage-section {background:#101010}
+.mortgage-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(20px,4vw,48px);
+  align-items:start;
+  margin-top:30px;
+}
+.mortgage-fields {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.mortgage-fields label {display:flex;flex-direction:column;gap:6px;justify-content:flex-end;font-size:15px}
+.mortgage-fields :is(input,select) {
+  width:100%;
+  min-height:46px;
+  padding:8px 10px;
+  color:#fff;
+  background:#191919;
+  border:1px solid #ffffff38;
+  color-scheme:dark;
+}
+.mortgage-reset {margin-top:16px;padding-inline:0;background:none;color:inherit;border:0;border-bottom:1px solid #c89733;font:inherit;font-size:15px}
+.mortgage-result {padding:clamp(18px,3vw,32px);border:1px solid #ffffff26;background:#181818}
+.mortgage-result .eyebrow {margin-bottom:6px}
+.mortgage-total {color:#d8ad58;font:400 clamp(28px,4.4vw,53px)/1.1 'DM Serif Display',Georgia,serif;overflow-wrap:anywhere}
+.mortgage-chart {
+  width:min(124px,50%);
+  aspect-ratio:1;
+  border-radius:50%;
+  margin:20px auto;
+  background:var(--mortgage-slices,#383838);
+  mask:radial-gradient(farthest-side,transparent 66%,#000 67%);
+}
+.mortgage-breakdown {margin:0;font-size:15px}
+.mortgage-breakdown>div {display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid #ffffff26}
+.mortgage-breakdown dt {display:flex;align-items:center;gap:8px}
+.mortgage-breakdown dt::before {content:'';width:8px;height:8px;flex:none;border-radius:50%;background:var(--slice-color)}
+.mortgage-breakdown dd {margin:0;text-align:right}
+.mortgage-note {margin:20px 0 0;color:#bdbdbd;font-size:14px}
+@media(max-width:760px){.mortgage-layout{grid-template-columns:1fr}}
+@media(max-width:360px){.mortgage-fields{grid-template-columns:1fr}}
+
+.aria-unit .wrap {
+  max-width:1320px;
+  margin:auto;
+  padding:clamp(50px,8.5vw,125px) clamp(20px,4.5vw,60px);
+}
+.aria-unit .gamma-content {border-top:1px solid var(--line)}
+.aria-unit .wrap h2 {
+  max-width:1000px;
+  margin-bottom:25px;
+  font:400 clamp(38px,5.4vw,78px)/1.03 Futura,sans-serif;
+  letter-spacing:-.02em;
+}
+.aria-unit .wrap h2 .editorial {font:400 1em/1 'Cormorant Garamond',Georgia,serif}
+.aria-unit .wrap p {max-width:850px}
+.aria-unit .wrap p + p {margin-top:14px}
+.aria-unit .wrap .textlink {display:inline-block;padding:8px 0;border-bottom:1px solid var(--gold)}
+.aria-unit .reference-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 65px;margin:42px 0 0}
+.aria-unit .reference-grid article {border-top:1px solid #595959;padding-top:22px}
+.aria-unit .reference-grid p,.aria-unit .unit-editorial p {color:var(--muted)}
+.aria-unit .reference-grid + .textlink {margin-top:20px}
+.aria-unit .unit-editorial {display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,6vw,80px);align-items:center}
+.aria-unit .unit-editorial > img {display:block;width:100%;height:auto}
+.aria-unit .unit-editorial .textlink {margin-top:15px}
+.aria-unit #unit-facts + .gamma-content {padding-bottom:clamp(20px,2.5vw,38px)}
+.aria-unit #unit-facts + .gamma-content + #unit-details {padding-top:clamp(20px,2.5vw,38px)}
+.aria-unit :is(.investment,.unit-specifications,.unit-private) {text-align:center}
+.aria-unit :is(.investment,.unit-specifications,.unit-private) :is(h2,p) {margin-inline:auto}
+.aria-unit .asking-price {color:var(--gold);font:400 clamp(36px,6vw,82px)/1.08 'DM Serif Display',Georgia,serif;margin:35px 0}
+.aria-unit .unit-data {width:min(100%,900px);margin:25px auto;border-collapse:collapse;font-size:clamp(14px,1.5vw,18px)}
+.aria-unit .unit-data :is(th,td) {padding:13px 9px;border-bottom:1px solid var(--line);text-align:center}
+.aria-unit .unit-data th {width:43%;font-weight:400;color:var(--gold)}
+.aria-unit .unit-placeholder {font-size:15px}
+.aria-unit .unit-placeholder strong {color:var(--gold);font-weight:400}
+.aria-unit .unit-video {display:block;width:100%;max-height:680px;margin-top:20px;background:#000}
+.aria-unit .unit-video-caption {color:var(--muted);font-size:14px}
+.aria-unit .supplied-gallery {background:#000}
+.aria-unit .unit-plan-section img {display:block;width:min(100%,980px);height:auto;margin:0 0 18px}
+.aria-unit .reference-amenity {display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:18px}
+.aria-unit .unit-icon-heading {display:flex;align-items:center;gap:10px}
+.aria-unit .unit-line-icon {flex:none;width:20px;height:20px;fill:none;stroke:var(--gold);stroke-width:1.35}
+.aria-unit .unit-private .reference-portrait {display:block;width:115px;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto 22px}
+.aria-unit .unit-private .solid {margin:20px 0 6px}
+.aria-unit .unit-legal p {font-size:15px;color:var(--muted)}
+@media(max-width:760px) {
+  .aria-unit .unit-editorial,.aria-unit .reference-grid {grid-template-columns:1fr;gap:26px}
+  .aria-unit .unit-editorial > img {max-height:60svh;object-fit:cover}
+}
+.aria-unit .agent-assets h2 {max-width:none}
+.aria-unit .agent-assets h3 {margin-bottom:18px}
+.aria-unit .agent-actions {display:flex;gap:16px 20px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.aria-unit .agent-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:35px}
+.aria-unit .agent-grid article {border:1px solid #ffffff26;padding:22px}
+.aria-unit .agent-grid h3 {font-size:20px;margin:12px 0}
+.aria-unit .agent-grid p {font-size:14px;color:#aaa}
+.aria-unit .agent-grid article > svg {display:block;width:24px;height:24px;fill:none;stroke:#d8ad58;stroke-width:1.5}
+.aria-unit .unit-legal {border-top:1px solid #ffffff24;padding-block:35px;color:#aaa;font-size:13px;line-height:1.55}
+.aria-unit .unit-legal h2 {font-size:15px;font-weight:700;letter-spacing:0;margin-bottom:18px}
+.aria-unit .unit-legal p {max-width:none;font-size:inherit;color:inherit;margin:0 0 11px}
+.aria-unit .unit-legal p + p {margin-top:0}
+.flatiron-unit .residence-feature-number {font-size:clamp(64px,10.5vw,210px)}
+.flatiron-unit .listing-header-brand .eyebrow {margin:0}
+.flatiron-unit .reference-amenity {max-height:580px;margin-top:22px}
+@media(max-width:760px) {
+  .aria-unit .agent-grid {grid-template-columns:1fr}
+  .flatiron-unit .residence-feature-number {font-size:clamp(62px,17vw,125px)}
+}
+
+.flatiron-unit .gallery-heading {display:flex;justify-content:space-between;gap:28px;align-items:end}
+.flatiron-unit .gallery-heading h2 {margin:0;font-size:clamp(42px,4.5vw,68px);line-height:1.06;letter-spacing:-.04em}
+.flatiron-unit .gallery-heading > p {max-width:320px}
+.flatiron-unit .gallery-filters {display:flex;gap:10px;flex-wrap:wrap;margin:35px 0}
+.flatiron-unit .gallery-filters button {border:1px solid #555;background:none;color:#ddd;padding:11px 18px;font:400 14px Futura,sans-serif;cursor:pointer}
+.flatiron-unit .gallery-filters [aria-pressed="true"] {color:#000;background:#c89733;border-color:#c89733}
+.flatiron-unit .supplied-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.flatiron-unit .supplied-photo {margin:0;border:1px solid #ffffff20}
+.flatiron-unit .supplied-photo button {display:block;position:relative;width:100%;overflow:hidden;background:#000}
+.flatiron-unit .supplied-photo img {height:340px;transition:transform .8s}
+.flatiron-unit .supplied-photo button:hover img {transform:scale(1.025)}
+.flatiron-unit .expand-photo {position:absolute;right:17px;bottom:17px;display:grid;place-items:center;width:44px;height:38px;border:1px solid #fff7;background:#0008;color:#fff}
+.flatiron-unit .supplied-photo figcaption {padding:18px 20px;font-size:11px;color:#b8b8b8}
+.flatiron-unit .supplied-photo figcaption strong {display:block;font-size:19px;font-weight:300;color:var(--text)}
+@media(max-width:760px) {
+  .flatiron-unit .gallery-heading {display:block}
+  .flatiron-unit .gallery-heading > p {margin-top:24px}
+  .flatiron-unit .gallery-filters button {font-size:12px;padding:10px 13px}
+  .flatiron-unit .supplied-grid {grid-template-columns:1fr;gap:20px}
+  .flatiron-unit .supplied-photo img {height:260px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .flatiron-unit .supplied-photo img {transition:none}
+}
+
+.aria-unit-strip-icons > div {display:flex;align-items:center;justify-content:center;gap:8px}
+.aria-unit-strip-icons dt {position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.aria-unit-strip-icons dd {margin:0;font-size:clamp(13px,1.05vw,17px)}
+.aria-unit-strip-icons .unit-line-icon {width:16px;height:16px;flex:none;fill:none;stroke:#d8ad58;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.aria-unit-strip-icons .sale-badge {color:#d8ad58}
+
+/* PH5503 highlights between the opportunity and mortgage sections. */
+.aria-unit .ph-highlights {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px;text-align:center}
+.ph-highlights article {padding:12px 16px}
+.ph-highlights img {display:block;width:72px;height:72px;object-fit:contain;margin:0 auto 18px}
+.ph-highlights h3 {font-size:clamp(18px,1.8vw,25px);font-weight:400;letter-spacing:.08em;margin:0 0 8px}
+.ph-highlights p {color:#c89733;font-size:15px;letter-spacing:.08em;margin:0;text-transform:uppercase}
+@media(max-width:760px){.aria-unit .ph-highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 8px}.ph-highlights article{padding:8px 0}.ph-highlights img{width:60px;height:60px}.ph-highlights h3{font-size:16px}.ph-highlights p{font-size:12px}}
+@media(max-width:360px){.aria-unit .ph-highlights{grid-template-columns:1fr}}

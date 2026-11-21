@@ -1,0 +1,233 @@
+{
+  "contact": {
+    "name": "Erik David Galindo",
+    "role": "Real estate advisor with Parsiani Real Estate, licensed in Florida. He presents himself as a Sales Agent for Aria Reserve.",
+    "phone": "+1 (305) 902-0139",
+    "phoneHref": "tel:+13059020139",
+    "email": "Erik@Parsiani.com",
+    "emailHref": "mailto:Erik@Parsiani.com",
+    "whatsapp": "https://wa.me/13059020139",
+    "office": "2480 Biscayne Blvd, Miami, FL 33137",
+    "instagram": "https://www.instagram.com/erikdavid_lifestyle/",
+    "instagramHandle": "@erikdavid_lifestyle"
+  },
+  "neighborhoods": [
+    {
+      "name": "Edgewater & Midtown",
+      "publishedDescription": "Vida junto a la bahía, arte y cultura. El entorno de Aria Reserve y una perspectiva distinta de Miami.",
+      "page": "index.html#explorar"
+    },
+    {
+      "name": "Brickell",
+      "publishedDescription": "El centro financiero de Miami: vida urbana, restaurantes y una energía que se siente a cada paso.",
+      "page": "index.html#explorar"
+    },
+    {
+      "name": "Downtown",
+      "publishedDescription": "La ciudad junto a Biscayne Bay. Cultura, arquitectura y conexión con el corazón de Miami.",
+      "page": "index.html#explorar"
+    },
+    {
+      "name": "Miami Beach",
+      "publishedDescription": "Playa, arquitectura Art Déco y una identidad propia junto al Atlántico.",
+      "page": "index.html#explorar"
+    },
+    {
+      "name": "Design District",
+      "publishedDescription": "Arte, diseño y arquitectura se encuentran en un barrio con carácter creativo.",
+      "page": "index.html#explorar"
+    }
+  ],
+  "developments": [
+    {
+      "name": "Aria Reserve",
+      "area": "Edgewater",
+      "address": "725 NE 24th Street, Miami",
+      "page": "aria-reserve.html",
+      "listingsPage": "aria-reserve.html#unidades",
+      "summary": "Two glass towers beside gardens and a bayfront promenade on Biscayne Bay. Erik is part of the sales team.",
+      "publishedFacts": [
+        "Brochure height described as 62 stories.",
+        "547 linear feet of bay frontage.",
+        "Developer: Melo Group. Architecture: Arquitectonica. Interiors: MORADA Haute Design. Landscape: ARQ GEO.",
+        "Lobby services described in the brochure: valet, 24-hour front desk and concierge.",
+        "Bay Level is a building amenity level: waterfront walk, kayak and paddleboard dock, restaurant and café, lounge pool, sun deck, whirlpool spa, meditation garden, observatory and dog park.",
+        "Skylobby is a building amenity level: business center, meeting rooms, flexible offices, coworking, coffee station, adult lounge with a bayfront terrace, private elevator and foyer, and wine storage.",
+        "Garden Level is a building amenity level: semi-Olympic pool, whirlpool, splash pad, playground, mini golf, theater, party room with kitchen and terrace, BBQ areas, children’s and teens’ rooms, and a wine lounge.",
+        "Fitness and spa, also building amenities: gym with an outdoor exercise area, tennis, padel and basketball courts, yoga lounge, meditation garden, massage rooms, sauna and steam room.",
+        "Brochure floor ranges: panoramic residences floors 3–56, Skyview Villas floors 47–56, penthouses floors 57–59, Penthouse Mansions floors 60–62.",
+        "Conflict: the homepage says 1–4 bedrooms according to Erik’s site, while the project brochure describes residences of one to five bedrooms from 1,028 to over 3,000 sq ft. Say that the two published sources differ and that sizes vary by residence.",
+        "The brochure contains historical pricing and delivery references. Do not state them as current terms."
+      ],
+      "materials": [
+        { "label": "Aria Reserve brochure (PDF)", "href": "assets/projects/aria-reserve-brochure.pdf" },
+        { "label": "Aria Reserve project video", "href": "https://youtu.be/3Fhm_6sTRwo" },
+        { "label": "Official Aria Reserve site", "href": "https://ariareserve.com/" },
+        { "label": "Official amenities", "href": "https://ariareserve.com/amenities/" }
+      ]
+    },
+    {
+      "name": "ORA by Casa Tua",
+      "area": "Brickell",
+      "page": "ora-by-casa-tua.html",
+      "summary": "Casa Tua’s residential concept in Brickell, combining nature, design and shared spaces. The official site describes residences designed by m2atelier. No individual residence is published on this website.",
+      "officialSite": "https://orabycasatua.com/"
+    },
+    {
+      "name": "Baccarat Residences",
+      "area": "Brickell",
+      "page": "baccarat-residences.html",
+      "summary": "A branded residential concept where the Miami River meets Biscayne Bay. The project site presents architecture by Arquitectonica and interiors by Meyer Davis, curated by Baccarat. No individual residence is published on this website.",
+      "officialSite": "https://baccaratresidences.miami/"
+    },
+    {
+      "name": "Okan Tower",
+      "area": "Downtown",
+      "page": "okan-tower.html",
+      "summary": "A mixed-use tower with a curved glass silhouette in Downtown Miami, combining residences and hospitality. No individual residence is published on this website.",
+      "officialSite": "https://www.okantowermiami.com/"
+    },
+    {
+      "name": "Brickell Flatiron",
+      "area": "Brickell",
+      "address": "1000 Brickell Plaza, Miami",
+      "page": "brickell-flatiron.html",
+      "amenitiesPage": "brickell-flatiron.html#amenidades",
+      "summary": "A 64-story residential tower in Miami’s financial district, completed in 2019, with 527 residences. Luis Revuelta designed the curved façade and elliptical terraces. Massimo Iosa Ghini led the interior architecture. Developer: CMC Group.",
+      "buildingAmenities": "The project page describes building amenities, including a 64th-floor rooftop with a panoramic pool, cabanas, daybeds and views of Biscayne Bay and the skyline. Those are amenities of the building, not features of an individual residence.",
+      "officialSite": "https://cmcgroupmiami.com/projects/brickell-flatiron.html"
+    }
+  ],
+  "residences": [
+    {
+      "name": "Aria Reserve 3002 A",
+      "alsoCalled": ["3002A", "3002 A", "Residence 3002 A"],
+      "development": "Aria Reserve",
+      "area": "Edgewater",
+      "operation": "for sale",
+      "page": "index.html#residence-3002",
+      "facts": [
+        "North Tower, floor 30, line 02A Special.",
+        "3 bedrooms plus an office, 3½ bathrooms.",
+        "Air-conditioned interior 2,390 sq ft · 222 m². Terrace 334 sq ft · 31 m². Total area 2,724 sq ft · 253 m².",
+        "The listing describes a double-width living and dining room with floor-to-ceiling windows and direct Biscayne Bay views.",
+        "Conflict: one passage says the living and dining room is 26 × 30 ft, and another says the 02A social space is approximately 26 × 31 ft. Quote both published figures and do not choose one.",
+        "The listing says the 02A Special collection comprises 29 residences. Do not turn that into a claim that only a few remain.",
+        "Appliances are described as included according to the listing.",
+        "The page describes a purchase by contract assignment and says the deposit breakdown must be confirmed with Erik. Do not invent the assignment amount or the balance due.",
+        "Delivery and availability statements on the source are inconsistent. Do not state a delivery date.",
+        "Published prices conflict and must both be named: the listing card and the sale-price line show US$2,950,000, and another line on the same residence page labels US$3,290,000 as a historical asking price. Identify each label and refer the visitor to Erik to confirm which figure is current and whether the residence is available."
+      ],
+      "materials": [
+        { "label": "Residence 3002 A", "href": "index.html#residence-3002" },
+        { "label": "Floor plan", "href": "assets/aria-3002-reference/3002-floor-plan.jpg" },
+        { "label": "3D floor plan", "href": "assets/aria-3002-reference/3002-floor-3d.jpg" },
+        { "label": "Gallery", "href": "index.html#unit-gallery" },
+        { "label": "360° virtual tour", "href": "https://my.matterport.com/show/?m=CGPfwyiUks2" }
+      ]
+    },
+    {
+      "name": "Aria Reserve 2204",
+      "development": "Aria Reserve",
+      "area": "Edgewater",
+      "operation": "for rent",
+      "page": "aria-reserve-2204.html",
+      "facts": [
+        "South Tower, floor 22, line 04.",
+        "1 bedroom plus an office, 2 bathrooms.",
+        "Total area 1,235 sq ft · 114 m². Terrace 198 sq ft · 18 m² according to the floor plan.",
+        "No monthly rent is published. The page says to check the rent with Erik.",
+        "Deposit, move-in fees, lease term and availability are marked as not yet confirmed. Do not invent them. The lease-terms paragraphs are placeholder copy and are not facts."
+      ],
+      "materials": [
+        { "label": "Residence 2204", "href": "aria-reserve-2204.html" },
+        { "label": "South Tower floor plans (PDF)", "href": "https://ariasales.com/wp-content/uploads/2025/05/Aria-Reserve-South-Tower-Floor-Plans.pdf" }
+      ]
+    },
+    {
+      "name": "Aria Reserve 3301",
+      "development": "Aria Reserve",
+      "area": "Edgewater",
+      "operation": "for sale",
+      "page": "aria-reserve-3301.html",
+      "facts": [
+        "North Tower, floor 33, line 01.",
+        "4 bedrooms plus an office, 5½ bathrooms.",
+        "Air-conditioned interior 3,030 sq ft · 281 m². Terrace 446 sq ft · 41 m². Total area 3,476 sq ft · 322 m².",
+        "Published asking price: US$2,950,000. Purchase structure, deposits and the balance at closing are marked as not confirmed."
+      ],
+      "materials": [
+        { "label": "Residence 3301", "href": "aria-reserve-3301.html" },
+        { "label": "Line 01 floor plan (PDF)", "href": "assets/aria-reserve-3301/line-01.pdf" },
+        { "label": "Line 01 3D floor plan", "href": "assets/aria-reserve-3301/line-01-3d.jpg" }
+      ]
+    },
+    {
+      "name": "Brickell Flatiron PH5503",
+      "alsoCalled": ["PH5503"],
+      "development": "Brickell Flatiron",
+      "area": "Brickell",
+      "operation": "for sale",
+      "page": "brickell-flatiron-ph5503.html",
+      "facts": [
+        "Address published on the residence page: 1000 Brickell Plaza, Miami, FL 33131.",
+        "Floor 55. 3 bedrooms, 3 full bathrooms and 1 half bathroom.",
+        "Listed interior area 2,076 sq ft. 2 assigned parking spaces + valet. SONOS AUDIO integration.",
+        "Published list price: US$2,800,000.",
+        "Published monthly HOA fee: US$3,165.58. The page says it includes operations, building insurance and reserves, water, sewer, trash, internet and cable, pool towel service and valet. Electricity is billed separately.",
+        "Published tax assessed value: US$2,283,876 (2025). This is an assessed value, not the asking price.",
+        "Listed terms on the page: cash, conventional or FHA. Sale condition: as-is.",
+        "The terrace and the city and bay views are described as features of this residence. The rooftop pool is on the 64th floor and is a building amenity, not a private feature of PH5503."
+      ],
+      "materials": [
+        { "label": "PH5503", "href": "brickell-flatiron-ph5503.html" },
+        { "label": "Floor plan (PDF)", "href": "assets/brickell-flatiron-ph5503/floor-plan.pdf" },
+        { "label": "Video tour", "href": "https://youtu.be/IfYBsY1JIGI" },
+        { "label": "Flyer A (PDF)", "href": "assets/projects/brickell-flatiron-ph5503-flyer-a.pdf" },
+        { "label": "Flyer B (PDF)", "href": "assets/projects/brickell-flatiron-ph5503-flyer-b.pdf" }
+      ]
+    }
+  ],
+  "links": [
+    "index.html",
+    "index.html#inicio",
+    "index.html#catalogo",
+    "index.html#listings",
+    "index.html#explorar",
+    "index.html#contacto",
+    "index.html#residence-3002",
+    "index.html#unit-gallery",
+    "aria-reserve.html",
+    "aria-reserve.html#unidades",
+    "aria-reserve-2204.html",
+    "aria-reserve-3301.html",
+    "ora-by-casa-tua.html",
+    "baccarat-residences.html",
+    "okan-tower.html",
+    "brickell-flatiron.html",
+    "brickell-flatiron.html#amenidades",
+    "brickell-flatiron-ph5503.html",
+    "assets/projects/aria-reserve-brochure.pdf",
+    "assets/aria-3002-reference/3002-floor-plan.jpg",
+    "assets/aria-3002-reference/3002-floor-3d.jpg",
+    "assets/aria-reserve-3301/line-01.pdf",
+    "assets/aria-reserve-3301/line-01-3d.jpg",
+    "assets/brickell-flatiron-ph5503/floor-plan.pdf",
+    "assets/projects/brickell-flatiron-ph5503-flyer-a.pdf",
+    "assets/projects/brickell-flatiron-ph5503-flyer-b.pdf",
+    "https://youtu.be/3Fhm_6sTRwo",
+    "https://youtu.be/IfYBsY1JIGI",
+    "https://my.matterport.com/show/?m=CGPfwyiUks2",
+    "https://ariareserve.com/",
+    "https://ariareserve.com/amenities/",
+    "https://orabycasatua.com/",
+    "https://baccaratresidences.miami/",
+    "https://www.okantowermiami.com/",
+    "https://cmcgroupmiami.com/projects/brickell-flatiron.html",
+    "https://ariasales.com/wp-content/uploads/2025/05/Aria-Reserve-South-Tower-Floor-Plans.pdf",
+    "https://wa.me/13059020139",
+    "https://www.instagram.com/erikdavid_lifestyle/",
+    "mailto:Erik@Parsiani.com",
+    "tel:+13059020139"
+  ]
+}

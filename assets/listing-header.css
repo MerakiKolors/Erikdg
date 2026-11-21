@@ -1,0 +1,109 @@
+.listing-header {
+  --listing-header-gutter:clamp(18px,3.1vw,72px);
+  background:#000;
+}
+.listing-header-heading {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:end;
+  gap:clamp(14px,3vw,48px);
+  margin:0;
+  padding:clamp(26px,3.3vw,70px) var(--listing-header-gutter) 12px;
+}
+.listing-header .residence-feature-number {
+  border-inline-start:2px solid #c89733;
+  padding-inline-start:.17em;
+  margin:0;
+  color:#fff6;
+  line-height:.8;
+}
+.listing-header-brand {
+  display:grid;
+  justify-items:end;
+  gap:clamp(10px,1.3vw,26px);
+  text-align:right;
+}
+.listing-header-project-link:focus-visible {outline:2px solid #c89733;outline-offset:5px}
+.listing-header-logo {
+  display:block;
+  width:clamp(90px,7.5vw,160px);
+  height:auto;
+  filter:grayscale(1) brightness(0) invert(1);
+}
+.listing-header .residence-feature-slogan {
+  font-size:clamp(24px,3.1vw,66px);
+  font-weight:400;
+  line-height:1.03;
+}
+.listing-header-media {
+  padding:clamp(14px,2.2vw,46px) var(--listing-header-gutter) 0;
+}
+.listing-header-photos {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  gap:clamp(6px,.9vw,18px);
+  aspect-ratio:2.78;
+}
+.listing-header-photo {
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  border:0;
+  background:#000;
+  color:#111;
+  cursor:pointer;
+}
+.listing-header-carousel {position:relative;min-height:0;grid-row:span 2}
+.listing-header-carousel .listing-header-photo {width:100%;height:100%}
+.listing-header-photo img {display:block;width:100%;height:100%;object-fit:cover}
+.listing-header-carousel img {
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1.5s ease-in-out;
+}
+.listing-header-carousel img[aria-hidden="false"] {opacity:1}
+.listing-header-photos > .listing-header-photo:last-child::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,#000c,transparent 76%);
+}
+.listing-header-gallery-button {
+  border:1px solid #c89733;
+  border-radius:0;
+  padding:7px 10px;
+  background:#c89733;
+  color:#111;
+  font:400 13px/1.25 Futura,sans-serif;
+  cursor:pointer;
+  margin-inline-start:auto;
+}
+.listing-header-photo:focus-visible,.listing-header-gallery-button:focus-visible {outline:2px solid #d8ad58;outline-offset:2px}
+#photo-dialog,
+#photo-dialog > img {background:#171717}
+.listing-header-actions {
+  --actions-space:clamp(16px,1vw,20px);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px 18px;
+  /* Match the visible gap above the text, including the link's own padding. */
+  padding-block:var(--actions-space) calc(var(--actions-space) + 14px);
+}
+#unit-facts {scroll-margin-top:12px}
+
+@media(max-width:760px) {
+  .listing-header-heading {grid-template-columns:1fr;align-items:start;gap:16px}
+  .listing-header-brand {justify-items:start;text-align:left}
+  .listing-header-project-link {grid-row:1}
+  .listing-header .residence-feature-slogan {font-size:clamp(25px,5.5vw,42px)}
+  .listing-header-photos {grid-template-rows:2fr 1fr;aspect-ratio:1.08}
+  .listing-header-carousel {grid-row:auto;grid-column:1 / -1}
+  .listing-header-actions {font-size:15px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .listing-header-carousel img {transition:none}
+}
