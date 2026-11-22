@@ -1,0 +1,78 @@
+{
+  "asOf": "2026-11-22",
+  "reportPeriod": "Q3 2026",
+  "periods": [
+    "Q3 2025",
+    "Q2 2026",
+    "Q3 2026"
+  ],
+  "reportUrl": "https://bhsmiami.com/bhsmiami-reports/BHS_Miami_MarketingResidential_Q3_2026.pdf",
+  "regions": {
+    "Brickell": {
+      "price": [
+        765598,
+        917464,
+        901391
+      ],
+      "psf": [
+        644,
+        687,
+        671
+      ],
+      "sales": [
+        198,
+        228,
+        202
+      ],
+      "days": [
+        105,
+        124,
+        125
+      ]
+    },
+    "Edgewater": {
+      "price": [
+        1293205,
+        946361,
+        882694
+      ],
+      "psf": [
+        718,
+        669,
+        650
+      ],
+      "sales": [
+        105,
+        147,
+        116
+      ],
+      "days": [
+        150,
+        129,
+        113
+      ]
+    },
+    "Downtown Miami": {
+      "price": [
+        1017178,
+        749791,
+        1172333
+      ],
+      "psf": [
+        707,
+        690,
+        707
+      ],
+      "sales": [
+        101,
+        114,
+        77
+      ],
+      "days": [
+        143,
+        123,
+        143
+      ]
+    }
+  }
+}

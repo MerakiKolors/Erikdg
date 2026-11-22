@@ -1,0 +1,21 @@
+/* Match the 3002A gallery while keeping unit photographs separate. */
+.aria-unit .supplied-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.aria-unit .supplied-photo{margin:0;border:1px solid #ffffff20}
+.aria-unit .supplied-photo button{display:block;position:relative;width:100%;padding:0;border:0;background:#161616;color:#fff;cursor:pointer}
+.aria-unit .supplied-photo img{display:block;width:100%;height:340px;object-fit:cover}
+.aria-unit .supplied-photo figcaption{padding:22px 24px;color:#b8b8b8;font-size:14px}
+.aria-unit .supplied-photo strong{display:block;color:#fff;font-weight:300;font-size:24px;margin-bottom:10px}
+.aria-unit .expand-photo{position:absolute;right:18px;bottom:18px;display:grid;place-items:center;width:48px;height:48px;background:#0008;border:1px solid #ffffff66;font-size:26px}
+.aria-unit .gallery-filters{display:flex;gap:10px;flex-wrap:wrap;margin:35px 0}
+.aria-unit .gallery-filters button{border:1px solid #555;background:none;color:#ddd;padding:11px 18px;cursor:pointer}
+.aria-unit .gallery-filters [aria-pressed="true"]{color:#000;background:#c89733;border-color:#c89733}
+.aria-unit [hidden]{display:none!important}
+@media(max-width:760px){.aria-unit .supplied-grid{grid-template-columns:1fr;gap:20px}.aria-unit .supplied-photo img{height:260px}}
+.aria-unit .supplied-photo figcaption{padding:18px 20px}
+.aria-unit .supplied-photo strong{font-size:19px;margin-bottom:0}
+.aria-unit .supplied-photo figcaption span{font-size:11px;color:#b8b8b8}
+.aria-unit .gallery-filters button{font-size:14px}
+.aria-unit .supplied-photo img{object-fit:contain;transition:transform .8s}
+.aria-unit .supplied-photo button:hover img{transform:scale(1.025)}
+.aria-unit .unit-video{aspect-ratio:16/9;object-fit:cover}
+@media(prefers-reduced-motion:reduce){.aria-unit .supplied-photo img{transition:none}}

@@ -1,0 +1,26 @@
+.market-trends{border-top:1px solid var(--line,#333);padding-block:90px}
+.market-trends h2{font:400 clamp(38px,5.4vw,78px)/1.05 Futura,sans-serif;letter-spacing:-.025em;margin:18px 0 28px;max-width:1000px}
+.market-trends h2 .editorial{font:400 1em/1 'Cormorant Garamond',Georgia,serif}
+.market-trends>p{max-width:850px;color:var(--muted,#bbb)}
+.market-trends .market-scope{font-size:14px;color:var(--gold,#c89733)}
+.market-controls{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0}
+.market-controls button{font:400 14px Futura,sans-serif;background:transparent;color:#ddd;border:1px solid #555;padding:12px 18px;cursor:pointer;min-height:44px}
+.market-controls button[aria-pressed=true]{background:var(--gold,#c89733);border-color:var(--gold,#c89733);color:#161616}
+.market-chart{border:1px solid #ffffff26;background:#161616;padding:36px 28px;display:grid;gap:32px;margin-bottom:32px}
+.market-chart:empty{display:none}
+.market-bar-row{display:grid;grid-template-columns:90px minmax(0,1fr) 120px;gap:18px;align-items:center;font-size:15px}
+.market-bar-row strong{font-weight:400;text-align:right;color:#ead6ad}
+.market-bar-track{background:#ffffff09;height:28px}
+.market-bar{display:block;height:100%;background:var(--gold,#c89733)}
+.market-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.market-table-scroll{overflow-x:auto}
+.market-table{border-collapse:collapse;width:100%;min-width:580px;font-size:15px;text-align:left}
+.market-table caption{text-align:left;color:var(--muted,#bbb);margin-bottom:18px}
+.market-table th,.market-table td{padding:15px 12px;border-bottom:1px solid #ffffff25;font-weight:300}
+.market-table thead th{color:var(--gold,#c89733);font-size:13px}
+.market-report{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:var(--muted,#bbb)}
+.market-report .textlink{font-size:14px}
+.market-methodology{margin-top:22px;font-size:13px;color:var(--muted,#bbb);max-width:900px}
+.market-methodology summary{cursor:pointer;min-height:36px;padding-block:8px}
+.market-trends [hidden]{display:none!important}
+@media(max-width:700px){.market-trends{padding-block:60px}.market-chart{padding:24px 16px;gap:26px}.market-bar-row{grid-template-columns:75px minmax(0,1fr) 90px;gap:10px;font-size:12px}.market-bar-track{height:22px}.market-controls button{font-size:12px;padding:10px 12px}.market-report{gap:12px}}
