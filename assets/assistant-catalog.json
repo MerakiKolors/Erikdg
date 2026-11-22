@@ -60,10 +60,22 @@
         "The brochure contains historical pricing and delivery references. Do not state them as current terms."
       ],
       "materials": [
-        { "label": "Aria Reserve brochure (PDF)", "href": "assets/projects/aria-reserve-brochure.pdf" },
-        { "label": "Aria Reserve project video", "href": "https://youtu.be/3Fhm_6sTRwo" },
-        { "label": "Official Aria Reserve site", "href": "https://ariareserve.com/" },
-        { "label": "Official amenities", "href": "https://ariareserve.com/amenities/" }
+        {
+          "label": "Aria Reserve brochure (PDF)",
+          "href": "assets/projects/aria-reserve-brochure.pdf"
+        },
+        {
+          "label": "Aria Reserve project video",
+          "href": "https://youtu.be/3Fhm_6sTRwo"
+        },
+        {
+          "label": "Official Aria Reserve site",
+          "href": "https://ariareserve.com/"
+        },
+        {
+          "label": "Official amenities",
+          "href": "https://ariareserve.com/amenities/"
+        }
       ]
     },
     {
@@ -101,7 +113,11 @@
   "residences": [
     {
       "name": "Aria Reserve 3002 A",
-      "alsoCalled": ["3002A", "3002 A", "Residence 3002 A"],
+      "alsoCalled": [
+        "3002A",
+        "3002 A",
+        "Residence 3002 A"
+      ],
       "development": "Aria Reserve",
       "area": "Edgewater",
       "operation": "for sale",
@@ -119,11 +135,26 @@
         "Published prices conflict and must both be named: the listing card and the sale-price line show US$2,950,000, and another line on the same residence page labels US$3,290,000 as a historical asking price. Identify each label and refer the visitor to Erik to confirm which figure is current and whether the residence is available."
       ],
       "materials": [
-        { "label": "Residence 3002 A", "href": "index.html#residence-3002" },
-        { "label": "Floor plan", "href": "assets/aria-3002-reference/3002-floor-plan.jpg" },
-        { "label": "3D floor plan", "href": "assets/aria-3002-reference/3002-floor-3d.jpg" },
-        { "label": "Gallery", "href": "index.html#unit-gallery" },
-        { "label": "360° virtual tour", "href": "https://my.matterport.com/show/?m=CGPfwyiUks2" }
+        {
+          "label": "Residence 3002 A",
+          "href": "index.html#residence-3002"
+        },
+        {
+          "label": "Floor plan",
+          "href": "assets/aria-3002-reference/3002-floor-plan.jpg"
+        },
+        {
+          "label": "3D floor plan",
+          "href": "assets/aria-3002-reference/3002-floor-3d.jpg"
+        },
+        {
+          "label": "Gallery",
+          "href": "index.html#unit-gallery"
+        },
+        {
+          "label": "360° virtual tour",
+          "href": "https://my.matterport.com/show/?m=CGPfwyiUks2"
+        }
       ]
     },
     {
@@ -140,8 +171,14 @@
         "Deposit, move-in fees, lease term and availability are marked as not yet confirmed. Do not invent them. The lease-terms paragraphs are placeholder copy and are not facts."
       ],
       "materials": [
-        { "label": "Residence 2204", "href": "aria-reserve-2204.html" },
-        { "label": "South Tower floor plans (PDF)", "href": "https://ariasales.com/wp-content/uploads/2025/05/Aria-Reserve-South-Tower-Floor-Plans.pdf" }
+        {
+          "label": "Residence 2204",
+          "href": "aria-reserve-2204.html"
+        },
+        {
+          "label": "South Tower floor plans (PDF)",
+          "href": "https://ariasales.com/wp-content/uploads/2025/05/Aria-Reserve-South-Tower-Floor-Plans.pdf"
+        }
       ]
     },
     {
@@ -151,20 +188,32 @@
       "operation": "for sale",
       "page": "aria-reserve-3301.html",
       "facts": [
-        "North Tower, floor 33, line 01.",
-        "4 bedrooms plus an office, 5½ bathrooms.",
-        "Air-conditioned interior 3,030 sq ft · 281 m². Terrace 446 sq ft · 41 m². Total area 3,476 sq ft · 322 m².",
-        "Published asking price: US$2,950,000. Purchase structure, deposits and the balance at closing are marked as not confirmed."
+        "North Tower, floor 33, Line 01. 4 bedrooms plus office and staff room; 5½ bathrooms.",
+        "Confirmed asking price US$3,700,000, MLS A12118739.",
+        "MLS areas: interior 2,996 sq ft; terrace 446 sq ft; total 3,442 sq ft. Generic Line 01 plans show different areas.",
+        "Two assigned parking spaces plus valet. Monthly HOA US$3,295.",
+        "Central cooling and heating; tile floors; pets allowed; 30-day minimum rentals, up to four per year."
       ],
       "materials": [
-        { "label": "Residence 3301", "href": "aria-reserve-3301.html" },
-        { "label": "Line 01 floor plan (PDF)", "href": "assets/aria-reserve-3301/line-01.pdf" },
-        { "label": "Line 01 3D floor plan", "href": "assets/aria-reserve-3301/line-01-3d.jpg" }
+        {
+          "label": "Residence 3301",
+          "href": "aria-reserve-3301.html"
+        },
+        {
+          "label": "Line 01 floor plan (PDF)",
+          "href": "assets/aria-reserve-3301/line-01.pdf"
+        },
+        {
+          "label": "Line 01 3D floor plan",
+          "href": "assets/aria-reserve-3301/line-01-3d.jpg"
+        }
       ]
     },
     {
       "name": "Brickell Flatiron PH5503",
-      "alsoCalled": ["PH5503"],
+      "alsoCalled": [
+        "PH5503"
+      ],
       "development": "Brickell Flatiron",
       "area": "Brickell",
       "operation": "for sale",
@@ -173,18 +222,62 @@
         "Address published on the residence page: 1000 Brickell Plaza, Miami, FL 33131.",
         "Floor 55. 3 bedrooms, 3 full bathrooms and 1 half bathroom.",
         "Listed interior area 2,076 sq ft. 2 assigned parking spaces.",
-        "Published list price: US$2,900,000.",
+        "Published list price: US$2,800,000.",
         "Published monthly HOA fee: US$3,165.58. The page says it includes operations, building insurance and reserves, water, sewer, trash, internet and cable, pool towel service and valet. Electricity is billed separately.",
         "Published tax assessed value: US$2,283,876 (2025). This is an assessed value, not the asking price.",
         "Listed terms on the page: cash, conventional or FHA. Sale condition: as-is.",
         "The terrace and the city and bay views are described as features of this residence. The rooftop pool is on the 64th floor and is a building amenity, not a private feature of PH5503."
       ],
       "materials": [
-        { "label": "PH5503", "href": "brickell-flatiron-ph5503.html" },
-        { "label": "Floor plan (PDF)", "href": "assets/brickell-flatiron-ph5503/floor-plan.pdf" },
-        { "label": "Video tour", "href": "https://youtu.be/IfYBsY1JIGI" },
-        { "label": "Flyer A (PDF)", "href": "assets/projects/brickell-flatiron-ph5503-flyer-a.pdf" },
-        { "label": "Flyer B (PDF)", "href": "assets/projects/brickell-flatiron-ph5503-flyer-b.pdf" }
+        {
+          "label": "PH5503",
+          "href": "brickell-flatiron-ph5503.html"
+        },
+        {
+          "label": "Floor plan (PDF)",
+          "href": "assets/brickell-flatiron-ph5503/floor-plan.pdf"
+        },
+        {
+          "label": "Video tour",
+          "href": "https://youtu.be/7B7xClCGWr0"
+        },
+        {
+          "label": "Flyer A (PDF)",
+          "href": "assets/projects/brickell-flatiron-ph5503-flyer-a.pdf"
+        },
+        {
+          "label": "Flyer B (PDF)",
+          "href": "assets/projects/brickell-flatiron-ph5503-flyer-b.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Aria Reserve 3407",
+      "development": "Aria Reserve",
+      "area": "Edgewater",
+      "operation": "for sale",
+      "page": "aria-reserve-3407.html",
+      "facts": [
+        "South Tower, floor 34, Line 07. Four bedrooms plus office and staff room; 5½ bathrooms.",
+        "Asking price US$2,989,000. MLS A12122111.",
+        "Published areas follow the supplied Line 07 plan at the owner’s instruction: 2,584 sq ft interior, 300 sq ft terrace, 2,884 sq ft total. Matrix lists slightly different areas.",
+        "One parking space plus valet. Monthly HOA US$3,150.",
+        "Private elevator foyer; bay and ocean views; offered unfurnished. Central cooling and heating; tile floors.",
+        "30-day minimum lease, up to four leases per year. Private showings require 24 hours notice."
+      ],
+      "materials": [
+        {
+          "label": "Residence 3407",
+          "href": "aria-reserve-3407.html"
+        },
+        {
+          "label": "Line 07 floor plan",
+          "href": "assets/aria-reserve-3407/line-07.png"
+        },
+        {
+          "label": "Residence video",
+          "href": "aria-reserve-3407.html#unit-video"
+        }
       ]
     }
   ],
@@ -228,6 +321,9 @@
     "https://wa.me/13059020139",
     "https://www.instagram.com/erikdavid_lifestyle/",
     "mailto:Erik@Parsiani.com",
-    "tel:+13059020139"
+    "tel:+13059020139",
+    "aria-reserve-3407.html",
+    "aria-reserve-3407.html#unit-video",
+    "assets/aria-reserve-3407/line-07.png"
   ]
 }
