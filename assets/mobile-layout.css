@@ -1,0 +1,88 @@
+.site-icon {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  flex:none;
+  vertical-align:-.12em;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+@media (max-width:900px) {
+  body > #site-header,
+  #site-header .nav.open {
+    border-bottom:1px solid #c89733;
+  }
+
+  #site-header :is(a, button) {
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  #site-header:focus,
+  #site-header :is(a, button):focus-visible {
+    outline:2px solid #c89733;
+    outline-offset:-2px;
+  }
+}
+
+@media (max-width:760px) {
+  :is(.intro,.services,.feature,.areas,.principles,.contact,.reviews,.faq-grid,
+      .catalog-grid,.aria-identity,.aria-facts,.aria-gallery,.amenity-grid,.social-grid,.footer-main,
+      .process-heading,.human-process,.story-grid,.residence-preview,.unit-fact-strip,.unit-editorial,.unit-quality,
+      .supplied-grid,.reference-grid,.agent-grid,.unit-browse-grid,.mortgage-fields,.mortgage-layout,
+      .listing-grid,.listing-fields,.listing-header-heading,.listing-header-stats,.finder-fields,
+      .project-facts,.project-levels,.project-grid,.project-unit,.directory-buildings,
+      .aria-unit-strip,.aria-unit-gallery,.aria-highlights,.aria-access-grid,.aria-amenity-level,.market-bar-row) {
+    grid-template-columns:minmax(0,1fr);
+  }
+
+  #catalogo .catalog-grid,
+  #galeria .flatiron-photo-grid,
+  .aria-unit :is(.supplied-grid,.unit-editorial,.reference-grid,.agent-grid),
+  :is(.aria-unit-3301,.flatiron-unit) .supplied-grid,
+  :is(.hero,.project-hero,.residence-hero) .hero-search-layout .finder-fields,
+  .unit-fact-strip {
+    grid-template-columns:minmax(0,1fr);
+  }
+
+  :is(.hero,.project-hero,.residence-hero) .hero-search-layout .finder-fields :is(label,.finder-select-field),
+  .finder-fields :is(label,.finder-select-field),
+  .process-path li,
+  #residence-page .unit-fact-strip > div {
+    grid-template-columns:minmax(0,1fr);
+  }
+  .process-path li::before {display:none}
+  .finder-fields :is(label,.finder-select-field) {gap:0;padding-top:10px}
+  .unit-fact-strip .unit-price-term {grid-column:1}
+  .listing-header-photos {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:none;
+    aspect-ratio:auto;
+  }
+  .listing-header-photos > :is(.listing-header-carousel,.listing-header-photo) {
+    grid-row:auto;
+    aspect-ratio:16/9;
+    width:100%;
+  }
+  .market-bar-row strong {text-align:left}
+  #neighborhood-content :is(.cards,.guide,.market-metrics,.profile,.gallery-frames),
+  #neighborhood-content .gallery-ready .gallery-frames {
+    grid-template-columns:minmax(0,1fr);
+  }
+
+  #neighborhood-content .gallery-ready figure[data-position=current] {grid-column:1}
+  #neighborhood-content .gallery-ready figure:not([data-position=current]) {display:none}
+  #neighborhood-content .market-controls {display:grid;grid-template-columns:minmax(0,1fr)}
+}
+
+footer .footer-privacy {
+  display:block;
+  width:fit-content;
+  margin-top:14px;
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:.22em;
+}

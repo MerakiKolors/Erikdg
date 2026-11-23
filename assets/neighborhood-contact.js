@@ -47,6 +47,7 @@
       name.reportValidity();
       return;
     }
+    window.trackSiteContact?.('whatsapp', 'inquiry_form');
     window.open('https://wa.me/13059020139?text=' + encodeURIComponent(composeMessage()), '_blank', 'noopener,noreferrer');
   });
 })();

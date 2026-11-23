@@ -1,0 +1,6 @@
+#privacy {background:#fff;color:#171717;color-scheme:light}
+#privacy .project-wrap {max-width:920px}
+#privacy h1 {font-size:clamp(48px,7vw,84px);margin-bottom:32px}
+#privacy h2 {font-size:clamp(29px,4vw,44px);margin:0 0 12px}
+#privacy section {margin-bottom:32px}
+#privacy a {text-decoration:underline;text-underline-offset:.2em}
