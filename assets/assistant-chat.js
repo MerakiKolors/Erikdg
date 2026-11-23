@@ -10,12 +10,16 @@
       placeholder: 'Escribe tu pregunta…',
       send: 'Enviar',
       question: 'Tu pregunta',
-      transfer: 'Continuar con Erik por WhatsApp ↗',
       disclaimer: 'Respuestas a partir de la información publicada en este sitio. Un precio mostrado es el precio publicado; Erik confirma vigencia y disponibilidad. No compartas datos sensibles.',
       greeting: 'Hola, soy el asistente virtual de Erik David. Puedo ayudarte a explorar propiedades, conocer un proyecto o ponerte en contacto con Erik. ¿Qué estás buscando?',
       pending: '…',
       failed: 'No pude responder en este momento. Puedes escribir a Erik por WhatsApp, llamarlo al +1 (305) 902-0139 o enviarle un correo a Erik@Parsiani.com.',
-      draft: questions => `Hola Erik, quisiera tu orientación. ${questions}`,
+      visit: 'Solicitar visita por WhatsApp',
+      browse: 'Explorar propiedades en esta zona',
+      talk: 'Hablar con Erik por WhatsApp',
+      draft: (context, visit) => visit
+        ? `Hola Erik, me gustaría solicitar una visita privada para ${context}.`
+        : context ? `Hola Erik, me gustaría recibir orientación sobre ${context}.` : 'Hola Erik, me gustaría recibir orientación inmobiliaria.',
     },
     en: {
       launchTitle: 'How can we guide you?',
@@ -27,12 +31,16 @@
       placeholder: 'Type your question…',
       send: 'Send',
       question: 'Your question',
-      transfer: 'Continue with Erik on WhatsApp ↗',
       disclaimer: 'Answers use information published on this website. A price shown here is the published asking price; Erik confirms whether it is current and whether the residence is available. Do not share sensitive details.',
       greeting: "Hi, I'm Erik David's virtual assistant. I can help you explore listings, learn about a development, or get in touch with Erik. What are you looking for?",
       pending: '…',
       failed: 'I could not reply just now. You can reach Erik on WhatsApp, call +1 (305) 902-0139, or email Erik@Parsiani.com.',
-      draft: questions => `Hi Erik, I would appreciate your guidance. ${questions}`,
+      visit: 'Request a viewing on WhatsApp',
+      browse: 'Explore listings in this area',
+      talk: 'Talk with Erik on WhatsApp',
+      draft: (context, visit) => visit
+        ? `Hi Erik, I'd like to request a private viewing for ${context}.`
+        : context ? `Hi Erik, I'd like your guidance on ${context}.` : "Hi Erik, I'd like your real estate guidance.",
     },
   };
 
@@ -40,6 +48,22 @@
   let links = new Set();
   let busy = false;
   let greetingNode = null;
+  let catalog;
+  let catalogRequest;
+
+  function pageContext() {
+    const page = location.pathname.split('/').pop();
+    const legacyUnit = document.body.classList.contains('unit-view');
+    const unit = legacyUnit || page === 'aria-reserve-3002.html'
+      ? document.querySelector('#residence-page [data-visit-unit]')?.dataset.visitUnit
+      : document.querySelector('main [data-visit-unit]:not(#residence-page *)')?.dataset.visitUnit;
+    return {
+      unit,
+      neighborhood: catalog?.neighborhoods?.find(area => area.page === page)?.name,
+      project: catalog?.developments?.find(development => development.page === page)?.name,
+    };
+  }
+
 
   function language() {
     return document.documentElement.lang === 'en' ? 'en' : 'es';
@@ -101,7 +125,7 @@
     input.placeholder = strings.placeholder;
     input.setAttribute('aria-label', strings.question);
     text(form.querySelector('button'), strings.send);
-    text(transfer, strings.transfer);
+    updateDraft();
     text(panel.querySelector('.chat-disclaimer'), strings.disclaimer);
     if (greetingNode && history.length === 0) text(greetingNode, strings.greeting);
   }
@@ -141,9 +165,19 @@
   }
 
   function updateDraft() {
-    const questions = history.filter(message => message.role === 'user').slice(-4).map(message => message.content).join(' ');
-    const draft = copy[language()].draft(questions).slice(0, 900);
+    const { unit, neighborhood, project } = pageContext();
+    const strings = copy[language()];
+    const lastQuestion = history.findLast(message => message.role === 'user')?.content || '';
+    const words = lastQuestion.toLowerCase().match(/[\p{L}\p{N}]+/gu) || [];
+    const question = ' ' + words.join(' ') + ' ';
+    const mentioned = catalog?.residences?.find(residence =>
+      [residence.name, ...(residence.alsoCalled || [])].some(alias => question.includes(' ' + alias.toLowerCase() + ' '))
+    );
+    const subject = mentioned?.name || unit || neighborhood || project;
+    const draft = strings.draft(subject, Boolean(unit || mentioned && /\b(visit\w*|viewing|showing)\b/i.test(lastQuestion)));
     transfer.href = `https://wa.me/13059020139?text=${encodeURIComponent(draft)}`;
+    text(transfer, unit ? strings.visit : strings.talk);
+    text(topicButtons[0], neighborhood ? strings.browse : strings.topics[0]);
   }
 
   function setOpen(open) {
@@ -151,25 +185,30 @@
     launch.setAttribute('aria-expanded', String(open));
     if (open) {
       input.focus();
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'chat_open' });
+      window.trackSiteChat?.('open');
+    } else {
+      launch.focus();
     }
   }
 
-  async function ensureLinks() {
-    if (links.size) return;
-    try {
-      const response = await fetch('assets/assistant-catalog.json');
-      if (!response.ok) return;
-      const catalog = await response.json();
-      if (Array.isArray(catalog.links)) links = new Set(catalog.links);
-    } catch { /* Answers still show the address as text. */ }
+  function ensureLinks() {
+    catalogRequest ??= fetch('assets/assistant-catalog.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Catalog unavailable');
+        return response.json();
+      })
+      .then(value => {
+        catalog = value;
+        links = new Set(Array.isArray(value.links) ? value.links : []);
+        updateDraft();
+      })
+      .catch(() => { catalogRequest = undefined; });
+    return catalogRequest;
   }
 
   async function ask(question) {
     const textValue = question.trim();
     if (!textValue || busy) return;
-    await ensureLinks();
     busy = true;
     input.disabled = true;
     form.querySelector('button').disabled = true;
@@ -180,6 +219,7 @@
     pending.textContent = copy[language()].pending;
     updateDraft();
     try {
+      await ensureLinks();
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -198,6 +238,7 @@
         pending.classList.remove('pending');
         pending.textContent = message;
         history.pop();
+        window.trackSiteChat?.('error');
         return;
       }
       const reader = response.body.getReader();
@@ -214,6 +255,7 @@
       if (!answer.trim()) {
         pending.textContent = copy[language()].failed;
         history.pop();
+        window.trackSiteChat?.('error');
         return;
       }
       renderAnswer(pending, answer.trim());
@@ -223,11 +265,12 @@
       pending.classList.remove('pending');
       pending.textContent = copy[language()].failed;
       history.pop();
+      window.trackSiteChat?.('error');
     } finally {
       busy = false;
       input.disabled = false;
       form.querySelector('button').disabled = false;
-      input.focus();
+      if (!panel.hidden) input.focus();
     }
   }
 
@@ -242,9 +285,21 @@
     input.value = '';
     ask(question);
   };
-  topicButtons.forEach(button => {
-    button.onclick = () => ask(button.textContent);
+  topicButtons.forEach((button, index) => {
+    if (index === 3) {
+      button.hidden = true;
+      return;
+    }
+    button.onclick = () => {
+      if (index === 0 && pageContext().neighborhood && document.getElementById('listings')) {
+        setOpen(false);
+        location.hash = 'listings';
+      } else {
+        ask(button.textContent);
+      }
+    };
   });
+  window.addEventListener('hashchange', updateDraft);
   window.askAssistant = ask;
   window.answerChat = ask;
 

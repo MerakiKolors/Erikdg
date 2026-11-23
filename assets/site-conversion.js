@@ -37,6 +37,9 @@
   }
 
   window.trackSiteContact = trackContact;
+  window.trackSiteChat = action => {
+    if (['open', 'error'].includes(action)) track('chat_' + action, { placement: 'widget' });
+  };
 
   function updateVisitLinks() {
     const english = document.documentElement.lang === 'en';
@@ -82,7 +85,7 @@
       track('contact_section_open', { entry: 'link' });
     } else if (url.protocol === 'tel:' || url.protocol === 'mailto:' || url.hostname === 'wa.me') {
       const channel = { 'tel:': 'phone', 'mailto:': 'email' }[url.protocol] || 'whatsapp';
-      trackContact(channel, 'link');
+      trackContact(channel, link.id === 'chat-transfer' ? 'chat' : 'link');
     }
   }, true);
 })();

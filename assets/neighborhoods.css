@@ -186,6 +186,15 @@ html[lang=en] #neighborhood-main [lang=es],html[lang=es] #neighborhood-main [lan
   color-scheme:dark;
 }
 #neighborhood-content #market h2,#neighborhood-content #market summary {color:#d2a64f}
+#neighborhood-content .market-data > summary {
+  display:flex;
+  align-items:center;
+  gap:.5em;
+  cursor:pointer;
+  list-style:none;
+}
+#neighborhood-content .market-data > summary::-webkit-details-marker {display:none}
+#neighborhood-content .market-data[open] .market-disclosure-arrow {transform:rotate(90deg)}
 #neighborhood-content #market select,
 #neighborhood-content #market .market-metrics button,
 #neighborhood-content #market .market-plot {background:#121212;color:#fff}

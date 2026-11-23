@@ -15,22 +15,65 @@
     {
       "name": "Edgewater",
       "publishedDescription": "Vida junto a la bahía, arte y cultura. El entorno de Aria Reserve y una perspectiva distinta de Miami.",
-      "page": "neighborhoods-edgewater.html"
+      "page": "neighborhoods-edgewater.html",
+      "publishedSnapshot": {
+        "Population": "21,199",
+        "Median age": "35",
+        "Residents per square mile": "51,079",
+        "Average individual income": "US$89,084",
+        "Walking": "85/100",
+        "Biking": "72/100",
+        "Public transit": "63/100"
+      },
+      "snapshotSource": "Demographics: U.S. Census Bureau. Mobility: Walk Score. Site snapshot; no live data.",
+      "snapshotPage": "neighborhoods-edgewater.html#local-data"
     },
     {
       "name": "Brickell",
       "publishedDescription": "El centro financiero de Miami: vida urbana, restaurantes y una energía que se siente a cada paso.",
-      "page": "neighborhoods-brickell.html"
+      "page": "neighborhoods-brickell.html",
+      "publishedSnapshot": {
+        "Population": "39,682",
+        "Median age": "39",
+        "Residents per square mile": "65,312",
+        "Average individual income": "US$106,187",
+        "Walking": "98/100",
+        "Biking": "79/100",
+        "Public transit": "89/100"
+      },
+      "snapshotSource": "Demographics: U.S. Census Bureau. Mobility: Walk Score. Site snapshot; no live data.",
+      "snapshotPage": "neighborhoods-brickell.html#local-data"
     },
     {
       "name": "Downtown Miami",
       "publishedDescription": "La ciudad junto a Biscayne Bay. Cultura, arquitectura y conexión con el corazón de Miami.",
-      "page": "neighborhoods-downtown-miami.html"
+      "page": "neighborhoods-downtown-miami.html",
+      "publishedSnapshot": {
+        "Population": "26,640",
+        "Median age": "37",
+        "Residents per square mile": "30,138",
+        "Average individual income": "US$84,508",
+        "Walking": "95/100",
+        "Biking": "76/100",
+        "Public transit": "100/100"
+      },
+      "snapshotSource": "Demographics: U.S. Census Bureau. Mobility: Walk Score. Site snapshot; no live data.",
+      "snapshotPage": "neighborhoods-downtown-miami.html#local-data"
     },
     {
       "name": "Miami Beach",
       "publishedDescription": "Playa, arquitectura Art Déco y una identidad propia junto al Atlántico.",
-      "page": "neighborhoods-miami-beach.html"
+      "page": "neighborhoods-miami-beach.html",
+      "publishedSnapshot": {
+        "Population": "82,031",
+        "Median age": "42.9",
+        "Residents per square mile": "10,664",
+        "Average individual income": "US$75,054",
+        "Walking": "61/100",
+        "Biking": "51/100"
+      },
+      "snapshotSource": "Demographics: U.S. Census Bureau. Mobility: Walk Score. Site snapshot; no live data.",
+      "snapshotPage": "neighborhoods-miami-beach.html#local-data"
     },
     {
       "name": "Design District",
@@ -121,7 +164,7 @@
       "development": "Aria Reserve",
       "area": "Edgewater",
       "operation": "for sale",
-      "page": "index.html#residence-3002",
+      "page": "aria-reserve-3002.html",
       "facts": [
         "North Tower, floor 30, line 02A Special.",
         "3 bedrooms plus an office, 3½ bathrooms.",
@@ -137,7 +180,7 @@
       "materials": [
         {
           "label": "Residence 3002 A",
-          "href": "index.html#residence-3002"
+          "href": "aria-reserve-3002.html"
         },
         {
           "label": "Floor plan",
@@ -149,7 +192,7 @@
         },
         {
           "label": "Gallery",
-          "href": "index.html#unit-gallery"
+          "href": "aria-reserve-3002.html#unit-gallery"
         },
         {
           "label": "360° virtual tour",
@@ -288,8 +331,8 @@
     "index.html#listings",
     "index.html#explorar",
     "index.html#contacto",
-    "index.html#residence-3002",
-    "index.html#unit-gallery",
+    "aria-reserve-3002.html",
+    "aria-reserve-3002.html#unit-gallery",
     "aria-reserve.html",
     "aria-reserve.html#unidades",
     "aria-reserve-2204.html",
@@ -329,6 +372,10 @@
     "neighborhoods-brickell.html",
     "neighborhoods-downtown-miami.html",
     "neighborhoods-miami-beach.html",
-    "neighborhoods-design-district.html"
+    "neighborhoods-design-district.html",
+    "neighborhoods-edgewater.html#local-data",
+    "neighborhoods-brickell.html#local-data",
+    "neighborhoods-downtown-miami.html#local-data",
+    "neighborhoods-miami-beach.html#local-data"
   ]
 }
