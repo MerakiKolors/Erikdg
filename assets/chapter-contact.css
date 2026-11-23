@@ -1,0 +1,57 @@
+#contacto.chapter-section {
+  background:#fff;
+  color:#000;
+  color-scheme:light;
+  padding:clamp(34px,6vw,78px) 0;
+  font:400 16px/1.65 Futura,Arial,sans-serif;
+}
+#contacto .chapter-contact.wrap {width:min(1150px,calc(100% - 48px));margin-inline:auto}
+#contacto .chapter-contact p+p {margin-top:1em}
+#contacto .chapter-contact p a {text-decoration:underline;text-underline-offset:.22em}
+#contacto .chapter-contact {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(35px,8vw,100px);
+}
+#contacto .chapter-contact h2 {
+  font-family:Futura,Arial,sans-serif;
+  font-size:clamp(38px,4.6vw,68px);
+  font-weight:300;
+  max-width:480px;
+  line-height:1.1;
+  margin-bottom:2rem;
+}
+#contacto .chapter-contact .eyebrow {color:#a67317}
+#contacto .chapter-contact form {border-top:1px solid #bbb;padding-top:20px}
+#contacto .chapter-contact .small {font-size:.86rem;color:#5c5c5c}
+#contacto .chapter-contact .goal-context {color:#555}
+#contacto .chapter-contact .field {display:block;margin:18px 0 22px}
+#contacto .chapter-contact :is(input,select,textarea) {
+  display:block;
+  width:100%;
+  color:#000;
+  background:#fff;
+  border:0;
+  border-bottom:1px solid #888;
+  border-radius:0;
+  padding:12px 0;
+  font:inherit;
+}
+#contacto .chapter-contact textarea {min-height:84px;resize:vertical}
+#contacto .chapter-contact .contact-choice {display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}
+#contacto .chapter-contact .contact-choice a {border-bottom:1px solid #aaa;padding-bottom:5px}
+#contacto .chapter-contact button {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  background:#c89733;
+  color:#000;
+  padding:14px 20px;
+  min-height:52px;
+  border:0;
+}
+@media(max-width:760px){
+  #contacto .chapter-contact {grid-template-columns:1fr}
+}

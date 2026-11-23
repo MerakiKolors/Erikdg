@@ -13,29 +13,29 @@
   },
   "neighborhoods": [
     {
-      "name": "Edgewater & Midtown",
+      "name": "Edgewater",
       "publishedDescription": "Vida junto a la bahía, arte y cultura. El entorno de Aria Reserve y una perspectiva distinta de Miami.",
-      "page": "index.html#explorar"
+      "page": "neighborhoods-edgewater.html"
     },
     {
       "name": "Brickell",
       "publishedDescription": "El centro financiero de Miami: vida urbana, restaurantes y una energía que se siente a cada paso.",
-      "page": "index.html#explorar"
+      "page": "neighborhoods-brickell.html"
     },
     {
-      "name": "Downtown",
+      "name": "Downtown Miami",
       "publishedDescription": "La ciudad junto a Biscayne Bay. Cultura, arquitectura y conexión con el corazón de Miami.",
-      "page": "index.html#explorar"
+      "page": "neighborhoods-downtown-miami.html"
     },
     {
       "name": "Miami Beach",
       "publishedDescription": "Playa, arquitectura Art Déco y una identidad propia junto al Atlántico.",
-      "page": "index.html#explorar"
+      "page": "neighborhoods-miami-beach.html"
     },
     {
       "name": "Design District",
       "publishedDescription": "Arte, diseño y arquitectura se encuentran en un barrio con carácter creativo.",
-      "page": "index.html#explorar"
+      "page": "neighborhoods-design-district.html"
     }
   ],
   "developments": [
@@ -324,6 +324,11 @@
     "tel:+13059020139",
     "aria-reserve-3407.html",
     "aria-reserve-3407.html#unit-video",
-    "assets/aria-reserve-3407/line-07.png"
+    "assets/aria-reserve-3407/line-07.png",
+    "neighborhoods-edgewater.html",
+    "neighborhoods-brickell.html",
+    "neighborhoods-downtown-miami.html",
+    "neighborhoods-miami-beach.html",
+    "neighborhoods-design-district.html"
   ]
 }

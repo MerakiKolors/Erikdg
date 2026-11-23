@@ -1,0 +1,194 @@
+#neighborhood-content{color-scheme:light;background:#fff;color:#20231f;font:400 16px/1.65 Futura,Arial,sans-serif;--ink:#20231f;--muted:#5c5e55;--paper:#fff;--soft:#f7f5ef;--line:#e3ded3;--accent:#765c37}
+#neighborhood-content a{color:inherit;text-underline-offset:.22em}
+#neighborhood-content img{display:block;width:100%;object-fit:cover}
+#neighborhood-content button,#neighborhood-content select{font:inherit;color:inherit}
+#neighborhood-content button{cursor:pointer}
+html[lang=en] #neighborhood-main [lang=es],html[lang=es] #neighborhood-main [lang=en]{display:none}
+#neighborhood-content .wrap{width:min(1150px,calc(100% - 48px));margin-inline:auto}
+#neighborhood-content h2,#neighborhood-content h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1;margin:0 0 .3em}
+#neighborhood-content h2{font-size:clamp(38px,4.6vw,68px);letter-spacing:-.035em}
+#neighborhood-content h3{font-size:27px;font-weight:400;line-height:1.25}
+#neighborhood-content .eyebrow{margin:0 0 12px;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.73rem;font-weight:700}
+#neighborhood-content .section{padding:clamp(34px,6vw,78px) 0}
+#neighborhood-content .section+.section{border-top:1px solid var(--line)}
+#neighborhood-content .section > p{max-width:74ch}
+#neighborhood-content .section.band{background:var(--soft)}
+#neighborhood-content .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:18px;margin-top:25px}
+#neighborhood-content .card{display:block;text-decoration:none;border:1px solid var(--line);background:white}
+#neighborhood-content .card:hover h3{text-decoration:underline;text-decoration-thickness:1px}
+#neighborhood-content .card img{aspect-ratio:8/5;object-position:center var(--position,50%)}
+#neighborhood-content .card div{padding:16px}
+#neighborhood-content .card p{margin:0;color:var(--muted)}
+#neighborhood-content .profile{display:grid;align-items:center;grid-template-columns:minmax(0,3fr) minmax(0,4fr);gap:clamp(24px,6vw,82px)}
+#neighborhood-content .profile img{max-height:540px;object-position:center 39%}
+#neighborhood-content .guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:22px;margin-top:24px}
+#neighborhood-content .guide article{border-top:1px solid var(--line);padding-top:18px}
+#neighborhood-content .map{width:100%;height:390px;border:1px solid var(--line);margin-top:15px}
+#neighborhood-content .market-controls{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0}
+#neighborhood-content .market-controls label{display:grid;gap:3px;font-size:.88rem}
+#neighborhood-content .market-controls select{background:white;border:1px solid var(--line);padding:8px 12px}
+#neighborhood-content .market-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px}
+#neighborhood-content .market-metrics button{text-align:left;background:white;border:1px solid var(--line);padding:13px 15px}
+#neighborhood-content .market-metrics button[aria-pressed=true]{background:var(--soft);border-color:var(--accent)}
+#neighborhood-content .market-metrics strong,#neighborhood-content .market-metrics small{display:block}
+#neighborhood-content .market-metrics strong{font-size:1.35rem}
+#neighborhood-content .market-plot{margin:20px 0 12px;border:1px solid var(--line);background:white;padding:12px}
+#neighborhood-content .market-plot canvas{width:100%;height:clamp(220px,35vw,350px);display:block}
+#neighborhood-content .market-plot output{display:block;color:var(--muted);min-height:1.65em;margin-left:9px}
+#neighborhood-content .market-table{overflow:auto;margin-top:13px}
+#neighborhood-content .market-table table{border-collapse:collapse;width:100%;text-align:right;font-variant-numeric:tabular-nums;font-size:.88rem}
+#neighborhood-content .market-table th,#neighborhood-content .market-table td{border-bottom:1px solid var(--line);padding:8px 10px}
+#neighborhood-content .market-table th:first-child{text-align:left}
+#neighborhood-content .market-table th{font-weight:600}
+#neighborhood-content .market-table tr:hover{background:var(--soft)}
+#neighborhood-content .market-note{color:var(--muted);font-size:.88rem}
+#neighborhood-content .comparison-heading{margin-top:30px}
+#neighborhood-content p+p{margin-top:1em}
+#neighborhood-content h2+p,#neighborhood-content h3+p{margin-top:.75em}
+#neighborhood-content p a,#neighborhood-content .profile a{ text-decoration:underline}
+#neighborhood-content .profile-section a{color:var(--gold)}
+#neighborhood-content .profile-section a{display:inline-block;margin-top:18px}
+#neighborhood-content .comparison-heading{border-bottom:2px solid var(--gold);padding-bottom:14px}
+#neighborhood-content #buying thead{background:#f5ead3}
+#neighborhood-content #buying tbody tr:hover,#neighborhood-content #buying tbody tr:focus-within{background:#c89733}
+#neighborhood-content #buying tbody a{color:#624612;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px}
+#neighborhood-content [hidden]{display:none!important}
+@media(max-width:600px){
+  #neighborhood-content .wrap{width:calc(100% - 32px)}
+  #neighborhood-content .profile{grid-template-columns:1fr}
+  #neighborhood-content .profile img{max-height:470px}
+  #neighborhood-content .map{height:310px}
+}
+.neighborhood-hero .hero-title-sans {
+  display:block;
+  margin-bottom:10px;
+  color:var(--gold);
+  font:400 clamp(14px,1.45vw,22px)/1.25 Futura,Arial,sans-serif;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+.neighborhood-hero h1 {
+  font-size:clamp(58px,6.8vw,104px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  max-width:1020px;
+  overflow-wrap:anywhere;
+}
+@media(max-width:760px){
+  .neighborhood-hero h1 {font-size:46px;line-height:1.08;max-width:340px}
+}
+@media(max-width:360px){
+  .neighborhood-hero h1 {font-size:40px}
+}
+#neighborhood-content .heading-sans {
+  font-family:Futura,Arial,sans-serif;
+  font-weight:400;
+  letter-spacing:-.02em;
+}
+#neighborhood-content .neighborhood-gallery {
+  margin-top:24px;
+}
+#neighborhood-content .neighborhood-gallery figure {margin:0}
+#neighborhood-content .neighborhood-gallery img {aspect-ratio:4/3}
+#neighborhood-content .neighborhood-gallery figcaption {margin-top:8px;color:var(--muted);font-size:.9rem}
+#neighborhood-content .neighborhood-gallery a {text-decoration:underline}
+
+#neighborhood-content .neighborhood-cards {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(16px,3vw,34px);
+}
+#neighborhood-content .neighborhood-cards .card {
+  display:grid;
+  align-content:start;
+  background:#000;
+  border:1px solid #252525;
+  border-radius:0;
+  padding:clamp(12px,2vw,22px);
+}
+#neighborhood-content .neighborhood-cards .card img {aspect-ratio:1}
+#neighborhood-content .neighborhood-cards .card div {padding:14px 0 2px}
+#neighborhood-content .neighborhood-cards .card h3 {
+  color:var(--gold);
+  font-family:Futura,Arial,sans-serif;
+  text-transform:uppercase;
+}
+#neighborhood-content .neighborhood-cards .card p {color:#f7f5ef}
+#neighborhood-content .neighborhood-cards .card:hover {border-color:var(--gold)}
+#neighborhood-content .profile-section {background:var(--paper);color:#fff}
+#neighborhood-content .profile {
+  background:#000;
+  grid-template-columns:minmax(0,1fr) minmax(0,2fr);
+  align-items:start;
+  padding:clamp(22px,5vw,60px);
+}
+#neighborhood-content .profile img {aspect-ratio:4/5}
+#neighborhood-content .profile h2 {color:var(--gold)}
+#neighborhood-content .profile-role {font-weight:400}
+#neighborhood-content .profile-links {display:flex;gap:8px 22px;flex-wrap:wrap}
+#neighborhood-content .gallery-frames {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+#neighborhood-content .gallery-ready .gallery-frames {
+  grid-template-columns:minmax(0,1fr) minmax(0,8fr) minmax(0,1fr);
+  column-gap:clamp(8px,2vw,24px);
+  align-items:start;
+}
+#neighborhood-content .gallery-ready figure[data-position] {grid-row:1}
+#neighborhood-content .gallery-ready figure[data-position=previous] {grid-column:1}
+#neighborhood-content .gallery-ready figure[data-position=current] {grid-column:2}
+#neighborhood-content .gallery-ready figure[data-position=next] {grid-column:3}
+#neighborhood-content .gallery-ready figure[data-position=offscreen] {display:none}
+#neighborhood-content .gallery-ready figure img {aspect-ratio:16/9}
+#neighborhood-content .gallery-ready figure:not([data-position=current]) img {
+  aspect-ratio:auto;
+  height:clamp(48px,32vw,400px);
+  align-self:start;
+  margin-top:clamp(5px,1.6vw,24px);
+  opacity:.55;
+}
+#neighborhood-content .gallery-ready figure:not([data-position=current]) figcaption {display:none}
+#neighborhood-content .gallery-ready figure[data-position=current] img {object-fit:cover}
+#neighborhood-content .gallery-controls {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  margin-top:14px;
+}
+#neighborhood-content .gallery-controls button {
+  width:44px;
+  height:44px;
+  border:1px solid var(--gold);
+  background:#000;
+  color:var(--gold);
+}
+#neighborhood-content .gallery-controls button:hover {background:var(--gold);color:#000}
+@media(max-width:850px){
+  #neighborhood-content .neighborhood-cards,
+  }
+@media(max-width:600px){
+  #neighborhood-content .neighborhood-cards,
+  }
+
+#neighborhood-content #buying tbody tr:is(:hover,:focus-within) a {
+  color:#000;
+  text-decoration-color:currentColor;
+}
+#neighborhood-content .neighborhood-editorial {max-width:90ch}
+#neighborhood-content .neighborhood-editorial article {margin-top:30px}
+#neighborhood-content #market {
+  --line:#51483a;
+  --muted:#e1dcd2;
+  background:#000;
+  color:#fff;
+  color-scheme:dark;
+}
+#neighborhood-content #market h2,#neighborhood-content #market summary {color:#d2a64f}
+#neighborhood-content #market select,
+#neighborhood-content #market .market-metrics button,
+#neighborhood-content #market .market-plot {background:#121212;color:#fff}
+#neighborhood-content #market .market-metrics button[aria-pressed=true],
+#neighborhood-content #market tbody tr:hover {background:#c89733;color:#000}
+#neighborhood-content #market thead {color:#d2a64f}

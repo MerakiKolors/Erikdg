@@ -54,7 +54,8 @@
   }
 
   const filters = document.querySelector('.listing-filters');
-  const listingCards = cards;
+  const listingSection = filters?.closest('section');
+  const listingCards = cards.filter(card => listingSection?.contains(card));
   function updateListings() {
     if (!filters) return;
     const data = new FormData(filters);
@@ -87,8 +88,8 @@
       card.style.order = String(index);
       if (matches) count++;
     });
-    document.querySelector('.listing-count').textContent = count + ' ' + (count === 1 ? local('unidad', 'listing') : local('unidades', 'listings'));
-    document.querySelector('.listing-empty').hidden = count > 0;
+    listingSection.querySelector('.listing-count').textContent = count + ' ' + (count === 1 ? local('unidad', 'listing') : local('unidades', 'listings'));
+    listingSection.querySelector('.listing-empty').hidden = count > 0;
   }
   if (filters) {
     const query = new URLSearchParams(location.search);

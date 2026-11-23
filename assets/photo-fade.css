@@ -1,0 +1,23 @@
+.photo-fade-box {
+  position:relative;
+  overflow:hidden;
+}
+.photo-fade-box img.photo-fade-image {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+[data-photo-fade] img[data-fade-image] {
+  opacity:1;
+  transition:opacity 1.2s ease-in-out;
+}
+[data-photo-fade] img[data-fade-image][data-inactive] {
+  opacity:0;
+  pointer-events:none;
+}
+.photo-fade-hero .project-hero-image {object-position:center}
+@media(prefers-reduced-motion:reduce){
+  [data-photo-fade] img[data-fade-image] {transition:none}
+}
