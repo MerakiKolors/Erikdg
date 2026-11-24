@@ -27,9 +27,40 @@
     document.head.append(collector);
   }
 
+  // Meta Pixel. Pega aquí el ID (solo números) desde Meta Events Manager.
+  // Vacío = el Pixel no se carga. Solo corre en producción y respeta Global Privacy Control.
+  const metaPixelId = '';
+  const metaEnabled = production && !navigator.globalPrivacyControl && /^\d+$/.test(metaPixelId);
+  const metaEvents = {
+    listing_open: 'ViewContent',
+    contact_handoff: 'Contact',
+    viewing_request_handoff: 'Schedule'
+  };
+
+  if (metaEnabled) {
+    const fbq = window.fbq = function () {
+      fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+    };
+    if (!window._fbq) window._fbq = fbq;
+    fbq.push = fbq;
+    fbq.loaded = true;
+    fbq.version = '2.0';
+    fbq.queue = [];
+    const pixel = document.createElement('script');
+    pixel.async = true;
+    pixel.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.append(pixel);
+    fbq('init', metaPixelId);
+    fbq('track', 'PageView');
+  }
+
   function track(event, properties) {
     (window.dataLayer ||= []).push({ event, ...properties });
     if (production && !navigator.globalPrivacyControl) window.va?.('event', { name: event, data: properties });
+    if (metaEnabled && metaEvents[event]) {
+      const listing = properties?.listing;
+      window.fbq('track', metaEvents[event], listing ? { content_ids: [listing], content_type: 'product' } : {});
+    }
   }
 
   function trackContact(channel, placement) {
