@@ -223,3 +223,14 @@ html[lang=en] #neighborhood-main [lang=es],html[lang=es] #neighborhood-main [lan
 @media(max-width:760px){
   #neighborhood-content .area-facts {grid-template-columns:1fr}
 }
+
+/* Neighborhood intro: span the full content width and justify the copy. */
+#neighborhood-content .neighborhood-editorial {max-width:none}
+#neighborhood-content .neighborhood-editorial p {
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+@media (max-width:760px) {
+  #neighborhood-content .neighborhood-editorial p {text-align:left;hyphens:manual;-webkit-hyphens:manual}
+}

@@ -73,7 +73,7 @@
   border-block:1px solid #ffffff24;font:300 19px/1.6 Futura,sans-serif;
 }
 .property-marquee-viewport {min-width:0;flex:1;overflow:hidden}
-.property-marquee-track {display:flex;width:max-content;animation:shared-property-scroll 50s linear infinite}
+.property-marquee-track {display:flex;width:max-content;animation:shared-property-scroll 85s linear infinite}
 .property-marquee-group {display:flex;flex:none;align-items:center}
 .property-marquee a {
   display:flex;align-items:center;gap:12px;padding:15px 0 15px 22px;
@@ -126,3 +126,6 @@
   .property-marquee-viewport {overflow-x:auto}
   .property-marquee-group[aria-hidden],.property-marquee .marquee-pause {display:none}
 }
+
+/* Neighborhood entries lead each group in the ticker. */
+.property-marquee a.marquee-area strong {color:#d8ad58;font-weight:500}
