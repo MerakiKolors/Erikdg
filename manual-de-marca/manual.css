@@ -240,3 +240,6 @@ figure { margin: 0; }
 .btn[disabled] { opacity: .5; cursor: default; }
 @media (max-width: 600px) { .grid.grid--2.grid--keep2 { grid-template-columns: 1fr 1fr; } }
 .grid--2 > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* Portraits of Erik: always keep the head in frame when cropped */
+.tile img[src*="retratos/"] { object-position: 50% 0; }
