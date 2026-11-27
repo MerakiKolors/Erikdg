@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { Readable } from 'node:stream';
 import { loadLocalEnv } from './lib/env.js';
 import { handleChatRequest } from './lib/assistant.js';
+import { guardManual, handleManualAccess, manualPassword } from './lib/manual-auth.js';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT) || 4173;
@@ -66,12 +67,41 @@ const server = createServer(async (req, res) => {
       else res.end();
       return;
     }
+    if (url.pathname === '/api/manual-acceso') {
+      const chunks = [];
+      for await (const chunk of req) chunks.push(chunk);
+      const request = new Request(`http://localhost${req.url}`, {
+        method: req.method,
+        headers: { 'content-type': req.headers['content-type'] || '' },
+        body: req.method === 'GET' || req.method === 'HEAD' ? undefined : Buffer.concat(chunks),
+      });
+      const response = await handleManualAccess(request, { password: manualPassword(), secure: false });
+      res.statusCode = response.status;
+      response.headers.forEach((value, key) => res.setHeader(key, value));
+      res.end(await response.text());
+      return;
+    }
+    // Same password gate the Vercel middleware applies to /manual-de-marca.
+    const gate = await guardManual(url.pathname, url.search, req.headers.cookie, manualPassword());
+    if (gate) {
+      res.statusCode = 307;
+      res.setHeader('Location', gate.redirect);
+      res.setHeader('Cache-Control', 'no-store');
+      res.end();
+      return;
+    }
+    if (url.pathname === '/manual-de-marca') {
+      res.statusCode = 308;
+      res.setHeader('Location', '/manual-de-marca/');
+      res.end();
+      return;
+    }
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       res.statusCode = 405;
       res.end('Method not allowed.');
       return;
     }
-    const file = safeFile(url.pathname);
+    const file = safeFile(url.pathname.endsWith('/') && url.pathname !== '/' ? `${url.pathname}index.html` : url.pathname);
     if (!file || !existsSync(file) || !statSync(file).isFile()) {
       res.statusCode = 404;
       res.end('Not found.');

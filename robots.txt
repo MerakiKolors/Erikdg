@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /manual-de-marca/
 
 Sitemap: https://www.erikdavidg.com/sitemap.xml
