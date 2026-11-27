@@ -22,6 +22,7 @@
   const href = slug => (slug === 'index' ? './' : `${slug}.html`);
   const pad = n => String(n).padStart(2, '0');
   const dl = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v9M4 7.5 8 11.5l4-4M2.5 14h11"/></svg>';
+  const back = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg>';
 
   const subs = [...document.querySelectorAll('section.block[id][data-title]')];
 
@@ -48,6 +49,7 @@
     <nav><ul class="nav">${items}</ul></nav>
     <div class="side__foot">
       <a class="btn btn--gold" href="descargas.html">Descargar recursos ${dl}</a>
+      <a class="btn btn--ghost" href="/">${back} Volver al sitio web</a>
       <a class="salir" href="/api/manual-acceso?salir=1">Cerrar sesión</a>
     </div>`;
   document.body.prepend(side);
@@ -93,7 +95,7 @@
         ${prev ? `<a href="${href(prev[0])}"><span class="label">← Anterior</span><b>${prev[1]}</b></a>` : '<span></span>'}
         ${next ? `<a href="${href(next[0])}"><span class="label">Siguiente →</span><b>${next[1]}</b></a>` : '<span></span>'}
       </nav>
-      <footer class="foot"><span>Erik David · Property Advisor</span><span>Uso interno · No distribuir</span></footer>`);
+      <footer class="foot"><a href="/">${back} Volver a erikdavidg.com</a><span>Erik David · Property Advisor</span><span>Uso interno · No distribuir</span></footer>`);
   }
 
   // Highlight the subsection in view

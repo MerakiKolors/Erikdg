@@ -243,3 +243,9 @@ figure { margin: 0; }
 
 /* Portraits of Erik: always keep the head in frame when cropped */
 .tile img[src*="retratos/"] { object-position: 50% 0; }
+
+/* Way back to the public website */
+.side__foot .btn--ghost { justify-content: flex-start; background: var(--blanco); }
+.foot a { display: inline-flex; align-items: center; gap: 8px; color: var(--tinta); text-decoration: none; }
+.foot a:hover { color: var(--dorado-oscuro); }
+.foot a svg { width: 14px; height: 14px; }
