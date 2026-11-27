@@ -18,10 +18,11 @@
   .art p { position:relative; margin:0; max-width:22ch; font-size:clamp(22px,2.4vw,32px); line-height:1.25; font-weight:400; }
   .art p span { color:var(--dorado); }
   .panel { display:flex; flex-direction:column; justify-content:center; padding:48px clamp(24px,6vw,96px); }
-  .wordmark { font-weight:300; font-size:30px; letter-spacing:.02em; line-height:1; }
-  .wordmark b { font-weight:700; }
-  .wordmark b i { font-style:normal; color:var(--dorado); }
-  .wordmark small { display:block; font-size:13px; letter-spacing:.06em; margin-top:6px; font-weight:400; }
+  .art p span { display:block; }
+  .brand { display:inline-block; width:fit-content; border-radius:4px; }
+  .brand img { display:block; width:min(340px, 100%); height:auto; }
+  .brand:hover img { opacity:.8; }
+  .brand:focus-visible { outline:2px solid var(--dorado); outline-offset:6px; }
   .kicker { margin:44px 0 10px; font:400 11px 'IBM Plex Mono',monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--gris); }
   h1 { margin:0 0 12px; font-weight:400; font-size:clamp(30px,3vw,40px); line-height:1.1; letter-spacing:-.01em; }
   .intro { margin:0 0 30px; color:#3a3833; max-width:38ch; }
@@ -48,7 +49,7 @@
     <p>El dorado no grita, <span>susurra valor.</span></p>
   </div>
   <main class="panel">
-    <div class="wordmark" aria-label="Erik David, Property Advisor">ERIK <b><i>D</i>AVID</b><small>PROPERTY ADVISOR</small></div>
+    <a class="brand" href="/" title="Ir a erikdavidg.com"><img src="/assets/logo-erik-parsiani-estate.png" width="760" height="208" alt="Erik David, Property Advisor · Parsiani Real Estate. Ir al sitio web"></a>
     <p class="kicker">Manual de identidad visual</p>
     <h1>Acceso privado</h1>
     <p class="intro">Este manual es de uso interno para el equipo de Erik David y sus aliados. Escribe la clave que te compartieron.</p>
